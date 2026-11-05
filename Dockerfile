@@ -1,7 +1,7 @@
 # Super JinX Panel: PasarGuard + Xray core + nginx in one Railway service (port 8080)
 FROM pasarguard/node:latest AS node
 
-FROM pasarguard/panel:latest
+FROM pasarguard/panel:v5.4.1
 
 RUN apt-get update && apt-get install -y --no-install-recommends nginx openssl ca-certificates curl \
  && rm -rf /var/lib/apt/lists/* /etc/nginx/sites-enabled/default
